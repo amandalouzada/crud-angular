@@ -30,8 +30,8 @@
       <tbody>
         <tr *ngFor="let person of persons">
           <td>{{person.name}}</td>
-          <td>{{person.cpf}}</td>
-          <td>{{person.phone}}</td>
+          <td>{{person.cpf | cpf}}</td>
+          <td>{{person.phone | phone}}</td>
           <td>
             <button type="button">Editar</button>
             <button type="button">Excluir</button>
@@ -40,5 +40,4 @@
       </tbody>
     </table>
   </div>
-
 </section>
