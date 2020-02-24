@@ -1,0 +1,49 @@
+@import 'colors';
+.btn {
+  border: none;
+  border-radius: 20px;
+  padding: 5px 14px;
+  margin: 2px;
+  font-size: larger;
+  cursor: pointer;
+  &:focus {
+    outline: none;
+  }
+}
+
+@each $name, $color in $colors {
+  .btn {
+    &--#{$name} {
+      background: $color;
+      color: $light;
+      &:hover{
+        background: darken( $color, 8% )
+      }
+      &:focus {
+        border: 2px solid darken( $color, 20% );
+        background: darken( $color, 10% )
+      }
+      &:disabled{
+        background: lighten( $color, 10% )
+      }
+    }
+  }
+}
+
+@each $name, $color in $colors {
+  .btn {
+    &-clear--#{$name} {
+      background: rgba(0,0,0,0);
+      color: $color;
+      border: .8px solid $color;
+      &:hover {
+        background: $color;
+        color: $light;
+      }
+      &:focus {
+        border: 1px solid darken( $color, 20% );
+        background: darken( $color, 10% )
+      }
+    }
+  }
+}

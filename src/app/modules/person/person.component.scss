@@ -8,4 +8,9 @@
     width: 100%;
     overflow-x: auto;
   }
+  &__action{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+  }
 }
