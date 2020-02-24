@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "crud-angular": {
@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "crud-angular"
+    }
+  },
+  "defaultProject": "crud-angular",
+  "cli": {
+    "analytics": "4602827e-ef3f-41e0-ab11-869b5397f96d"
+  }
 }
