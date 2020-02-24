@@ -1,0 +1,28 @@
+@import "colors";
+
+.table {
+
+  margin-top: 15px;
+  width: 100%;
+  overflow:hidden;
+  border: solid 1px $grey;
+  border-radius: 20px;
+  border-collapse: collapse;
+  background-color: #efefef;
+
+
+  th {
+    border: none;
+    text-align: left;
+    padding: 10px;
+    text-transform: uppercase;
+  }
+  td {
+    text-transform: uppercase;
+    padding: 8px 10px;
+  }
+  .th--green {
+    background: $green;
+    color: $light;
+  }
+}
