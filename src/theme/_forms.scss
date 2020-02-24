@@ -19,4 +19,11 @@
     display: flex;
     justify-content: flex-end;
   }
+  &__error {
+    padding-left: 6px;
+    font-size: 0.8rem;
+    &--danger {
+      color: $red;
+    }
+  }
 }

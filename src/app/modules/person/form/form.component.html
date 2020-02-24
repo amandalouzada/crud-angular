@@ -2,14 +2,17 @@
   <div class="form__control">
     <label class="form__label" for="name" >Nome Completo</label>
     <input class="form__input" formControlName="name" type="text" name="name" id="name">
+    <app-error-msg [control]="personForm.get('name')"></app-error-msg>
   </div>
   <div class="form__control">
     <label class="form__label" for="cpf">CPF</label>
     <input class="form__input" mask="000.000.000-00" formControlName="cpf" type="text" name="name" id="cpf">
+    <app-error-msg [control]="personForm.get('cpf')"></app-error-msg>
   </div>
   <div class="form__control">
     <label class="form__label" for="phone">Telefone</label>
     <input class="form__input" mask="+00 (00) 00000 0000"  formControlName="phone" type="text" name="name" id="phone">
+    <app-error-msg [control]="personForm.get('phone')"></app-error-msg>
   </div>
   <div class="form__action">
     <button class="btn btn--purple" (click)="saveForm()" [disabled]="personForm.invalid"> Salvar</button>
