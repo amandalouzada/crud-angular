@@ -1,0 +1,16 @@
+.page{
+  width: 100%;
+  max-width: 1080px;
+  margin-right: auto;
+  margin-left: auto;
+  overflow: hidden;
+  &__table{
+    width: 100%;
+    overflow-x: auto;
+  }
+  &__action{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+  }
+}

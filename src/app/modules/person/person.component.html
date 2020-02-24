@@ -1,0 +1,60 @@
+<app-popup #newPersonPopup (close)="resetForm()">
+  <h2>Cadastrar nova pessoa</h2>
+  <app-form (save)="saveNewPerson($event)" #newPersonForm></app-form>
+</app-popup>
+
+<app-popup #editPersonPopup>
+  <h2>Editar</h2>
+  <app-form (save)="editPerson($event)" [person]="selectedPerson"></app-form>
+</app-popup>
+
+<app-popup #deletPersonPopup>
+  <h3>Deseja deletar {{selectedPerson?.name}}?</h3>
+  <div class="popup__actions">
+    <button class="btn btn-clear--purple" (click)="cancelDelete()"> Cancelar</button>
+    <button class="btn btn--purple" (click)="delete()"> Confirmar</button>
+  </div>
+</app-popup>
+
+<section class="page">
+  <h1>
+    Cadastro de Pessoas
+  </h1>
+  <div class="page__action">
+    <button type="button" class="btn btn--green" (click)="openNewPersonPopup()">Cadastrar</button>
+  </div>
+
+
+  <div class="page__table">
+    <table class="table">
+      <thead>
+        <tr>
+          <th class="th--green">
+            Nome
+          </th>
+          <th class="th--green">
+            CPF
+          </th>
+          <th class="th--green">
+            Telefone
+          </th>
+          <th class="th--green">
+            Opções
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let person of persons">
+          <td>{{person.name}}</td>
+          <td>{{person.cpf | cpf}}</td>
+          <td>{{person.phone | phone}}</td>
+          <td>
+            <button class="btn btn-clear--purple" (click)="showPerson(person)" type="button"><span
+                class="icon icdocument-edit"></span></button>
+            <button class="btn btn-clear--purple" (click)="confirmDeletePerson(person)" type="button"><span class="icon ictrash-can"></span></button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>

@@ -1,0 +1,9 @@
+<div class="popup" [class.popup--show]="isOpen">
+
+  <div class="popup__container popup__container--background" [class.popup__container--show]="isOpen" (clickOutside)="clickOutside()">
+      <button class="popup__close" (click)="closePopup()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    <ng-content></ng-content>
+  </div>
+</div>
