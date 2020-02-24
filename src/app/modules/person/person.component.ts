@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Person } from 'src/app/models/person';
+import { PopupComponent } from '../shared/popup/popup.component';
 
 @Component({
   selector: 'app-person',
@@ -7,7 +8,7 @@ import { Person } from 'src/app/models/person';
   styleUrls: ['./person.component.scss']
 })
 export class PersonComponent implements OnInit {
-
+  @ViewChild(PopupComponent) popup: PopupComponent;
 
   public persons: Person[] = [];
 
@@ -29,5 +30,11 @@ export class PersonComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  openPopup(){
+    this.popup.openPopup();
+  }
+
+
 
 }
