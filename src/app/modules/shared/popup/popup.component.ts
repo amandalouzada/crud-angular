@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-popup',
@@ -8,12 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class PopupComponent implements OnInit {
 
   public isOpen: boolean = false;
+  @Output() close: EventEmitter<boolean> = new EventEmitter(); 
   constructor() { }
 
   ngOnInit(): void {
   }
 
   closePopup() {
+    this.close.emit(true);
     setTimeout(() => {
       this.isOpen = false;
     }, 100)

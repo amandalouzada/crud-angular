@@ -4,6 +4,7 @@ import { PopupComponent } from './popup/popup.component';
 import { ClickOutsideDirective } from './directives/click-outside.directive';
 import { PhonePipe } from './pipes/phone.pipe';
 import { CpfPipe } from './pipes/cpf.pipe';
+import { ErrorMsgComponent } from './error-msg/error-msg.component';
 
 
 
@@ -13,7 +14,8 @@ import { CpfPipe } from './pipes/cpf.pipe';
     PopupComponent,
     ClickOutsideDirective,
     PhonePipe,
-    CpfPipe
+    CpfPipe,
+    ErrorMsgComponent
   ],
   imports: [
     CommonModule
@@ -23,6 +25,7 @@ import { CpfPipe } from './pipes/cpf.pipe';
     ClickOutsideDirective,
     PhonePipe,
     CpfPipe,
+    ErrorMsgComponent
   ]
 })
 export class SharedModule { }

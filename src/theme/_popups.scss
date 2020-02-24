@@ -51,6 +51,11 @@
       color: $light;
     }
   }
+
+  &__actions{
+    display: flex;
+    justify-content: flex-end;
+  }
   
 }
 
