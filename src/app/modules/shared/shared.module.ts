@@ -1,16 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PopupComponent } from './popup/popup.component';
+import { ClickOutsideDirective } from './directives/click-outside.directive';
 
 
 
 @NgModule({
-  declarations: [PopupComponent],
+  declarations: [
+    PopupComponent,
+    ClickOutsideDirective
+  ],
   imports: [
     CommonModule
   ],
-  exports:[
-    PopupComponent
+  exports: [
+    PopupComponent,
+    ClickOutsideDirective
   ]
 })
 export class SharedModule { }
