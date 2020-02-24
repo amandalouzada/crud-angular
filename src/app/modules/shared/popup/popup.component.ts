@@ -20,19 +20,14 @@ export class PopupComponent implements OnInit {
   }
 
   openPopup() {
-    console.log('open')
     setTimeout(() => {
       this.isOpen = true;
     }, 100)
   }
 
   clickOutside() {
-    console.log('open');
-
     if (this.isOpen){
-      console.log('open');
       this.closePopup();
-
     }
   }
 
