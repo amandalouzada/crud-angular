@@ -9,9 +9,31 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba($dark, 0.8);
-  z-index: 1;
+  pointer-events: none;
+  
 
+  &--show{
+    pointer-events: all;
+    background-color: rgba($dark, 0.8);
+    z-index: 1;
+  }
+
+  &__close{
+    position: relative;
+    float: right;
+    color: $light;
+    top: -10px;
+    right: -38px;
+
+    border: none;
+    cursor: pointer;
+    border-radius: 2px;
+    background: rgba(0, 0, 0, 0);
+    &:focus {
+      background: rgba(0, 0, 0, 0.2);
+      outline: none;
+    }
+  }
   &__container {
     padding: 20px 50px;
     min-width: 600px;
@@ -30,4 +52,26 @@
     }
   }
   
+}
+
+
+@media screen and (max-width: 600px) {
+  .popup {
+    overflow: auto;
+    &__close{
+      font-size: 2rem;
+      color: $green;
+    }
+    &--show {
+      background-color:$light;
+    }
+    &__container {
+      padding: 10px 30px;
+      min-width: 300px;
+      &--background {
+        background-color: $light;
+        color: $green;
+      }
+    }
+  }
 }
