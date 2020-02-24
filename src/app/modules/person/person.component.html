@@ -1,37 +1,41 @@
-<h1>
-  Cadastro de Pessoas
-</h1>
-<button type="button">Cadastrar</button>
-
 <app-popup>
+  <h1>Olá Popup</h1>
 </app-popup>
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        Nome
-      </th>
-      <th>
-        CPF
-      </th>
-      <th>
-        Telefone
-      </th>
-      <th>
-        Opções
-      </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let person of persons">
-      <td>{{person.name}}</td>
-      <td>{{person.cpf}}</td>
-      <td>{{person.phone}}</td>
-      <td>
-        <button type="button">Editar</button>
-        <button type="button">Excluir</button>
-      </td>
-    </tr>
-  </tbody>
-</table>
+<section class="page">
+
+  <h1>
+    Cadastro de Pessoas
+  </h1>
+  <button type="button">Cadastrar</button>
+
+  <table>
+    <thead>
+      <tr>
+        <th>
+          Nome
+        </th>
+        <th>
+          CPF
+        </th>
+        <th>
+          Telefone
+        </th>
+        <th>
+          Opções
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let person of persons">
+        <td>{{person.name}}</td>
+        <td>{{person.cpf}}</td>
+        <td>{{person.phone}}</td>
+        <td>
+          <button type="button">Editar</button>
+          <button type="button">Excluir</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
