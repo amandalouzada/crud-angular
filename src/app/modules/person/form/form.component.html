@@ -1,0 +1,17 @@
+<form class="form" [formGroup]="personForm">
+  <div class="form__control">
+    <label class="form__label" for="name" >Nome Completo</label>
+    <input class="form__input" formControlName="name" type="text" name="name" id="name">
+  </div>
+  <div class="form__control">
+    <label class="form__label" for="cpf">CPF</label>
+    <input class="form__input" formControlName="cpf" type="text" name="name" id="cpf">
+  </div>
+  <div class="form__control">
+    <label class="form__label" for="phone">Telefone</label>
+    <input class="form__input" formControlName="phone" type="text" name="name" id="phone">
+  </div>
+  <div class="form__action">
+    <button class="btn btn--purple" (click)="saveForm()" [disabled]="personForm.invalid"> Salvar</button>
+  </div>
+</form>

@@ -1,5 +1,6 @@
-<app-popup>
-  <h1>Olá Popup</h1>
+<app-popup #newPersonPopup>
+  <h2>Cadastrar nova pessoa</h2>
+  <app-form (save)="saveNewPerson($event)"></app-form>
 </app-popup>
 
 <section class="page">

@@ -1,0 +1,22 @@
+.form{
+  &__input{
+    display: block;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid $light;
+    border-radius: 20px;
+    font-size: 1rem;
+    margin-top: 2px;
+    &:focus {
+      outline: none;
+      border: 1px solid darken($light, 40%);
+    }
+  }
+  &__control{
+    margin: 15px 0;
+  }
+  &__action {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

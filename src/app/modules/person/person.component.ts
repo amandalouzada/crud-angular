@@ -8,7 +8,7 @@ import { PopupComponent } from '../shared/popup/popup.component';
   styleUrls: ['./person.component.scss']
 })
 export class PersonComponent implements OnInit {
-  @ViewChild(PopupComponent) popup: PopupComponent;
+  @ViewChild('newPersonPopup') newPersonPopup: PopupComponent;
 
   public persons: Person[] = [];
 
@@ -31,10 +31,14 @@ export class PersonComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  openPopup(){
-    this.popup.openPopup();
+  openPopup() {
+    this.newPersonPopup.openPopup();
   }
 
+  saveNewPerson(person: Person) {
+    this.persons.push(new Person(person))
+    this.newPersonPopup.closePopup();
+  }
 
 
 }
