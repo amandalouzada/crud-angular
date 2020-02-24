@@ -5,6 +5,7 @@ import { PersonComponent } from './person.component';
 import { PersonRoutingModule } from './person-routing.module';
 import { SharedModule } from '../shared/shared.module';
 import { FormComponent } from './form/form.component';
+import { NgxMaskModule } from 'ngx-mask';
 
 
 
@@ -14,6 +15,7 @@ import { FormComponent } from './form/form.component';
     CommonModule,
     PersonRoutingModule,
     ReactiveFormsModule,
+    NgxMaskModule.forRoot(),
     SharedModule
   ]
 })

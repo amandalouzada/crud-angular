@@ -5,11 +5,11 @@
   </div>
   <div class="form__control">
     <label class="form__label" for="cpf">CPF</label>
-    <input class="form__input" formControlName="cpf" type="text" name="name" id="cpf">
+    <input class="form__input" mask="000.000.000-00" formControlName="cpf" type="text" name="name" id="cpf">
   </div>
   <div class="form__control">
     <label class="form__label" for="phone">Telefone</label>
-    <input class="form__input" formControlName="phone" type="text" name="name" id="phone">
+    <input class="form__input" mask="+00 (00) 00000 0000"  formControlName="phone" type="text" name="name" id="phone">
   </div>
   <div class="form__action">
     <button class="btn btn--purple" (click)="saveForm()" [disabled]="personForm.invalid"> Salvar</button>
