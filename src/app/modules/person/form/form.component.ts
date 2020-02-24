@@ -1,6 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Person } from 'src/app/models/person';
+import { FormValidations } from './form-validators';
 
 @Component({
   selector: 'app-form',
@@ -17,10 +18,10 @@ export class FormComponent implements OnInit {
         validators: [Validators.required]
       }),
       cpf: new FormControl('', {
-        validators: [Validators.required]
+        validators: [Validators.required, FormValidations.cpfValidator]
       }),
       phone: new FormControl('', {
-        validators: [Validators.required]
+        validators: [Validators.required, FormValidations.phoneValidator]
       }),
     })
   }
